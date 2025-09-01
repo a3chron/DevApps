@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight, X } from "lucide-react";
+import Embed from "./Embed";
 
 type InfoProps = {
   title: string;
@@ -12,15 +13,13 @@ export default function Info({ title, text, url, onHide }: InfoProps) {
   return (
     <div
       onClick={onHide}
-      className="z-30 bg-zinc-800/20 w-[100vw] h-[100vh] fixed top-0 left-0 backdrop-blur-sm flex flex-col items-center justify-center gap-4"
+      className="z-30 bg-zinc-800/20 w-[100vw] h-[100vh] fixed top-0 left-0 backdrop-blur-xl flex flex-col items-center justify-center gap-4"
     >
       <div className="bg-primary/20 dark:bg-primary/20 border-2 dark:border-primary border-primary backdrop-blur-2xl rounded-3xl w-full md:w-96 h-fit z-50">
         <h2 className="w-full text-center font-bold p-2 text-lg text-primary">
           {title}
         </h2>
-        <object data={url} className="w-full h-fit">
-          Website preview could not be shown
-        </object>
+        <Embed url={url} />
         <p className="text-black fonst-bold dark:text-primary p-2 px-4 sm:p-10">
           {text}
         </p>

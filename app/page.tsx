@@ -44,7 +44,7 @@ export default function App() {
         </div>
         <Link
           target="_blank"
-          href="https://github.com/kurtschambach/devApps/"
+          href="https://github.com/a3chron/devApps/"
           className="text-black/80 hover:text-black dark:text-white/80 dark:hover:text-white duration-150"
         >
           <Github />
